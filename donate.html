@@ -53,35 +53,36 @@
             <div class="card-body p-4">
               <h3 class="fw-semibold mb-4">Donation form</h3>
               <form id="donationForm" class="row g-3">
+                <input type="hidden" name="formType" value="donation" />
                 <div class="col-12">
                   <label class="form-label">Organization name</label>
-                  <input type="text" class="form-control" required />
+                  <input type="text" name="providerName" class="form-control" required />
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Food type</label>
-                  <input type="text" class="form-control" placeholder="e.g. Bread, produce" required />
+                  <input type="text" name="foodType" class="form-control" placeholder="e.g. Bread, produce" required />
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Quantity</label>
-                  <input type="text" class="form-control" placeholder="e.g. 20 loaves" required />
+                  <input type="text" name="quantity" class="form-control" placeholder="e.g. 20 loaves" required />
                 </div>
                 <div class="col-12">
                   <label class="form-label">Pickup location</label>
-                  <input type="text" class="form-control" required />
+                  <input type="text" name="pickupLocation" class="form-control" required />
                 </div>
                 <div class="col-12">
                   <label class="form-label">Availability window</label>
-                  <input type="text" class="form-control" placeholder="Today, 4-6 pm" required />
+                  <input type="text" name="availabilityWindow" class="form-control" placeholder="Today, 4-6 pm" required />
                 </div>
                 <div class="col-12">
                   <label class="form-label">Notes</label>
-                  <textarea class="form-control" rows="4" placeholder="Any handling, storage, or allergy notes"></textarea>
+                  <textarea name="notes" class="form-control" rows="4" placeholder="Any handling, storage, or allergy notes"></textarea>
                 </div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-success w-100">Submit donation request</button>
                 </div>
               </form>
-              <div id="donationMessage" class="alert alert-success mt-3 d-none"></div>
+              <div id="donationMessage" class="alert alert-success mt-3 d-none" role="status" aria-live="polite"></div>
             </div>
           </div>
         </div>

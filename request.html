@@ -53,56 +53,57 @@
             <div class="card-body p-4">
               <h3 class="fw-semibold mb-4">Request form</h3>
               <form id="requestForm" class="row g-3">
+                <input type="hidden" name="formType" value="request" />
                 <div class="col-12">
                   <label class="form-label">Name of person</label>
-                  <input type="text" class="form-control" required />
+                  <input type="text" name="name" class="form-control" required />
                 </div>
                 <div class="col-12">
                   <label class="form-label">Contact information</label>
-                  <input type="text" class="form-control" placeholder="Phone number or email" required />
+                  <input type="text" name="contact" class="form-control" placeholder="Phone number or email" required />
                 </div>
                 <div class="col-12">
                   <label class="form-label">Food categories needed</label>
                   <div class="row g-2 mt-1">
                     <div class="col-sm-6 form-check">
-                      <input class="form-check-input" type="checkbox" value="Halal" id="halal" />
+                      <input class="form-check-input" type="checkbox" name="categories" value="Halal" id="halal" />
                       <label class="form-check-label" for="halal">Halal</label>
                     </div>
                     <div class="col-sm-6 form-check">
-                      <input class="form-check-input" type="checkbox" value="Vegetarian" id="vegetarian" />
+                      <input class="form-check-input" type="checkbox" name="categories" value="Vegetarian" id="vegetarian" />
                       <label class="form-check-label" for="vegetarian">Vegetarian</label>
                     </div>
                     <div class="col-sm-6 form-check">
-                      <input class="form-check-input" type="checkbox" value="Vegan" id="vegan" />
+                      <input class="form-check-input" type="checkbox" name="categories" value="Vegan" id="vegan" />
                       <label class="form-check-label" for="vegan">Vegan</label>
                     </div>
                     <div class="col-sm-6 form-check">
-                      <input class="form-check-input" type="checkbox" value="Gluten-Free" id="glutenFree" />
+                      <input class="form-check-input" type="checkbox" name="categories" value="Gluten-Free" id="glutenFree" />
                       <label class="form-check-label" for="glutenFree">Gluten-Free</label>
                     </div>
                     <div class="col-sm-6 form-check">
-                      <input class="form-check-input" type="checkbox" value="Nut-Free" id="nutFree" />
+                      <input class="form-check-input" type="checkbox" name="categories" value="Nut-Free" id="nutFree" />
                       <label class="form-check-label" for="nutFree">Nut-Free</label>
                     </div>
                     <div class="col-sm-6 form-check">
-                      <input class="form-check-input" type="checkbox" value="Other" id="otherFood" />
+                      <input class="form-check-input" type="checkbox" name="categories" value="Other" id="otherFood" />
                       <label class="form-check-label" for="otherFood">Other</label>
                     </div>
                   </div>
                 </div>
                 <div class="col-12">
                   <label class="form-label">Allergies or dietary notes</label>
-                  <textarea class="form-control" rows="3" placeholder="Examples: nut allergy, dairy-free, no shellfish"></textarea>
+                  <textarea name="dietaryNotes" class="form-control" rows="3" placeholder="Examples: nut allergy, dairy-free, no shellfish"></textarea>
                 </div>
                 <div class="col-12">
                   <label class="form-label">Quantity needed</label>
-                  <input type="text" class="form-control" placeholder="e.g. 20 packs or 50 meals" required />
+                  <input type="text" name="quantity" class="form-control" placeholder="e.g. 20 packs or 50 meals" required />
                 </div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-success w-100">Submit request</button>
                 </div>
               </form>
-              <div id="requestMessage" class="alert alert-success mt-3 d-none"></div>
+              <div id="requestMessage" class="alert alert-success mt-3 d-none" role="status" aria-live="polite"></div>
             </div>
           </div>
         </div>
