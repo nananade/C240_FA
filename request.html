@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Request Food | FoodLink AI</title>
+    <title>Request Food | FoodLink AI Singapore</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
       <div class="container">
-        <a class="navbar-brand fw-bold text-success" href="index.html"><i class="fa-solid fa-seedling me-2"></i>FoodLink AI</a>
+        <a class="navbar-brand fw-bold text-success" href="index.html"><i class="fa-solid fa-seedling me-2"></i>FoodLink AI Singapore</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,17 +33,17 @@
       <div class="row g-5">
         <div class="col-lg-6">
           <span class="badge rounded-pill bg-success-subtle text-success px-3 py-2 mb-3">Request food support</span>
-          <h1 class="display-5 fw-bold mb-4">Request food for your organisation or community event.</h1>
+          <h1 class="display-5 fw-bold mb-4">Request food for your organisation or community programme.</h1>
           <p class="text-muted lead">
-            Whether you are a shelter, school, food bank, or event organiser, you can request food quickly through our simple form.
+            Whether you are supporting families, a shelter, or a community event in Singapore, we can help connect you with suitable food donations.
           </p>
           <div class="card border-0 shadow-sm rounded-4 mt-4">
             <div class="card-body p-4">
-              <h5 class="fw-semibold">We can help with</h5>
+              <h5 class="fw-semibold">We help with</h5>
               <ul class="list-unstyled mb-0">
                 <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Community meal distributions</li>
                 <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Shelter and outreach programmes</li>
-                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Event catering and emergency support</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Event catering and emergency requests</li>
               </ul>
             </div>
           </div>
@@ -54,29 +54,49 @@
               <h3 class="fw-semibold mb-4">Request form</h3>
               <form id="requestForm" class="row g-3">
                 <div class="col-12">
-                  <label class="form-label">Organisation name</label>
-                  <input type="text" class="form-control" required />
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Contact person</label>
-                  <input type="text" class="form-control" required />
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Phone or email</label>
+                  <label class="form-label">Name of person</label>
                   <input type="text" class="form-control" required />
                 </div>
                 <div class="col-12">
-                  <label class="form-label">Need description</label>
-                  <textarea class="form-control" rows="4" placeholder="Tell us what food you need and why" required></textarea>
+                  <label class="form-label">Contact information</label>
+                  <input type="text" class="form-control" placeholder="Phone number or email" required />
                 </div>
                 <div class="col-12">
-                  <label class="form-label">Urgency</label>
-                  <select class="form-select" required>
-                    <option value="">Select urgency</option>
-                    <option>Today</option>
-                    <option>This week</option>
-                    <option>Planning ahead</option>
-                  </select>
+                  <label class="form-label">Food categories needed</label>
+                  <div class="row g-2 mt-1">
+                    <div class="col-sm-6 form-check">
+                      <input class="form-check-input" type="checkbox" value="Halal" id="halal" />
+                      <label class="form-check-label" for="halal">Halal</label>
+                    </div>
+                    <div class="col-sm-6 form-check">
+                      <input class="form-check-input" type="checkbox" value="Vegetarian" id="vegetarian" />
+                      <label class="form-check-label" for="vegetarian">Vegetarian</label>
+                    </div>
+                    <div class="col-sm-6 form-check">
+                      <input class="form-check-input" type="checkbox" value="Vegan" id="vegan" />
+                      <label class="form-check-label" for="vegan">Vegan</label>
+                    </div>
+                    <div class="col-sm-6 form-check">
+                      <input class="form-check-input" type="checkbox" value="Gluten-Free" id="glutenFree" />
+                      <label class="form-check-label" for="glutenFree">Gluten-Free</label>
+                    </div>
+                    <div class="col-sm-6 form-check">
+                      <input class="form-check-input" type="checkbox" value="Nut-Free" id="nutFree" />
+                      <label class="form-check-label" for="nutFree">Nut-Free</label>
+                    </div>
+                    <div class="col-sm-6 form-check">
+                      <input class="form-check-input" type="checkbox" value="Other" id="otherFood" />
+                      <label class="form-check-label" for="otherFood">Other</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Allergies or dietary notes</label>
+                  <textarea class="form-control" rows="3" placeholder="Examples: nut allergy, dairy-free, no shellfish"></textarea>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Quantity needed</label>
+                  <input type="text" class="form-control" placeholder="e.g. 20 packs or 50 meals" required />
                 </div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-success w-100">Submit request</button>
@@ -91,7 +111,7 @@
 
     <footer class="bg-dark text-light py-4">
       <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-        <p class="mb-0">© <span id="year"></span> FoodLink AI. Feeding communities with purpose.</p>
+        <p class="mb-0">© <span id="year"></span> FoodLink AI Singapore. Feeding communities with purpose.</p>
       </div>
     </footer>
 

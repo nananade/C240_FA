@@ -1,12 +1,14 @@
 :root {
-  --primary: #2e8b57;
-  --primary-dark: #1f6a42;
-  --bg: #f7fbf8;
+  --primary: #1f9d6b;
+  --primary-dark: #14724f;
+  --accent: #ff7b54;
+  --deep: #123b2b;
+  --bg: #f5fbf7;
   --text: #183124;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: var(--text);
   background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
 }
@@ -16,7 +18,12 @@ body {
 }
 
 .hero-section {
-  background: radial-gradient(circle at top left, rgba(46, 139, 87, 0.12), transparent 35%), var(--bg);
+  background: radial-gradient(circle at top left, rgba(31, 157, 107, 0.16), transparent 35%), var(--bg);
+}
+
+.hero-card img {
+  height: 420px;
+  object-fit: cover;
 }
 
 .btn-success {
@@ -71,4 +78,18 @@ body {
   background: var(--primary);
   color: white;
   margin-left: auto;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(31, 157, 107, 0.2);
+}
+
+.bg-success {
+  background-color: var(--primary) !important;
+}
+
+.text-success {
+  color: var(--primary) !important;
 }
