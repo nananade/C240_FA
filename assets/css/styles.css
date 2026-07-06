@@ -1,0 +1,74 @@
+:root {
+  --primary: #2e8b57;
+  --primary-dark: #1f6a42;
+  --bg: #f7fbf8;
+  --text: #183124;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+}
+
+.hero-section {
+  background: radial-gradient(circle at top left, rgba(46, 139, 87, 0.12), transparent 35%), var(--bg);
+}
+
+.btn-success {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-success:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-outline-success {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-success:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.08) !important;
+}
+
+.chat-messages {
+  min-height: 300px;
+  background: #f9fcfa;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.message {
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.9rem;
+  max-width: 85%;
+}
+
+.message.assistant {
+  background: #e9f8ef;
+  color: var(--text);
+}
+
+.message.user {
+  background: var(--primary);
+  color: white;
+  margin-left: auto;
+}
