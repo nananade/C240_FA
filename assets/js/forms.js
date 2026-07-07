@@ -84,11 +84,12 @@ function buildPayload(form, type) {
   return {
     formType: getFieldValue(form, 'formType'),
     providerName: getFieldValue(form, 'providerName'),
-    contact: getFieldValue(form, 'contact'),
     foodType: getFieldValue(form, 'foodType'),
     quantity: getFieldValue(form, 'quantity'),
-    pickupLocation: getFieldValue(form, 'pickupLocation'),
-    availabilityWindow: getFieldValue(form, 'availabilityWindow'),
+    region: getFieldValue(form, 'region'),
+    email: getFieldValue(form, 'email'),
+    collectionDate: getFieldValue(form, 'collectionDate'),
+    collectionTime: getFieldValue(form, 'collectionTime'),
     notes: getFieldValue(form, 'notes'),
   };
 }
