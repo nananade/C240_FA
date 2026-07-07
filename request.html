@@ -32,9 +32,9 @@
       <div class="row g-5">
         <div class="col-lg-6">
           <span class="badge rounded-pill bg-success-subtle text-success px-3 py-2 mb-3">Request food support</span>
-          <h1 class="display-5 fw-bold mb-4">Request food for your organisation or community programme.</h1>
+          <h1 class="display-5 fw-bold mb-4">Request food from an organisation or charity.</h1>
           <p class="text-muted lead">
-            Whether you are supporting families, a shelter, or a community event in Singapore, we can help connect you with suitable food donations.
+            Tell the organisation what food you need, how much you need, and how to contact you. We will compare your request with current donation listings to see whether it may be covered.
           </p>
           <div class="card border-0 shadow-sm rounded-4 mt-4">
             <div class="card-body p-4">
@@ -50,16 +50,16 @@
         <div class="col-lg-6">
           <div class="card shadow rounded-4 border-0">
             <div class="card-body p-4">
-              <h3 class="fw-semibold mb-4">Request form</h3>
+              <h3 class="fw-semibold mb-4">Request food from an organisation</h3>
               <form id="requestForm" class="row g-3">
                 <input type="hidden" name="formType" value="request" />
                 <div class="col-12">
-                  <label class="form-label">Name of person</label>
-                  <input type="text" name="name" class="form-control" required />
+                  <label class="form-label">Your name</label>
+                  <input type="text" name="name" class="form-control" placeholder="e.g. Aisha Rahman" required />
                 </div>
                 <div class="col-12">
-                  <label class="form-label">Contact information</label>
-                  <input type="text" name="contact" class="form-control" placeholder="Phone number or email" required />
+                  <label class="form-label">Phone number</label>
+                  <input type="tel" name="contact" class="form-control" placeholder="e.g. 9123 4567" inputmode="tel" required />
                 </div>
                 <div class="col-12">
                   <label class="form-label">Food categories needed</label>
@@ -97,6 +97,7 @@
                 <div class="col-12">
                   <label class="form-label">Quantity needed</label>
                   <input type="text" name="quantity" class="form-control" placeholder="e.g. 20 packs or 50 meals" required />
+                  <div id="requestCoverageMessage" class="form-text mt-2">Enter the amount you need and we will compare it with current donation listings.</div>
                 </div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-success w-100">Submit request</button>
@@ -117,7 +118,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/request.js"></script>
+    <script src="assets/js/forms.js"></script>
     <script src="assets/js/assistant.js"></script>
   </body>
 </html>
