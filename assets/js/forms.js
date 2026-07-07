@@ -19,6 +19,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+function validateForm(form) {
+  const requiredFields = Array.from(form.querySelectorAll('input[required], select[required], textarea[required]'));
+  for (const field of requiredFields) {
+    if (!field.value || (field.type === 'checkbox' && !field.checked)) {
+      field.focus();
+      return false;
+    }
+  }
+
+  const emailField = form.querySelector('input[type="email"]');
+  if (emailField && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
+    emailField.focus();
+    return false;
+  }
+
+  return true;
+}
+
 function getFieldValue(form, name) {
   const field = form.querySelector(`[name="${name}"]`);
   return field ? field.value.trim() : '';
@@ -96,6 +114,12 @@ async function handleFormSubmit(form, type, messageId) {
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     const messageBox = document.getElementById(messageId);
+
+    if (!validateForm(form)) {
+      showMessage(messageBox, 'Please complete all required fields and provide a valid email address.', false);
+      return;
+    }
+
     const webhookUrl = buildWebhookUrl(type);
     const payload = buildPayload(form, type);
 
@@ -147,6 +171,7 @@ function buildPayload(form, type) {
       formType: getFieldValue(form, 'formType'),
       name: getFieldValue(form, 'name'),
       contact: getFieldValue(form, 'contact'),
+      region: getFieldValue(form, 'region'),
       urgency: getFieldValue(form, 'urgency'),
       categories: getCheckboxValues(form, 'categories'),
       dietaryNotes: getFieldValue(form, 'dietaryNotes'),
