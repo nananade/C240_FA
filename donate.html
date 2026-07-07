@@ -41,7 +41,7 @@
               <h5 class="fw-semibold">What to include</h5>
               <ul class="list-unstyled mb-0">
                 <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Organisation name, food type, and quantity</li>
-                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Region or postal code for collection</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Region for collection</li>
                 <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Collection date and time window</li>
               </ul>
             </div>
@@ -66,8 +66,15 @@
                   <input type="text" name="quantity" class="form-control" placeholder="e.g. 20 loaves or 10kg" required />
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label">Region / postal code</label>
-                  <input type="text" name="region" class="form-control" placeholder="e.g. Tampines, 528833" required />
+                  <label class="form-label">Region</label>
+                  <select name="region" class="form-select" required>
+                    <option value="" selected disabled>Select a region</option>
+                    <option value="Central">Central</option>
+                    <option value="North">North</option>
+                    <option value="North-East">North-East</option>
+                    <option value="East">East</option>
+                    <option value="West">West</option>
+                  </select>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Email</label>
