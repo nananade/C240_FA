@@ -147,6 +147,7 @@ function buildPayload(form, type) {
       formType: getFieldValue(form, 'formType'),
       name: getFieldValue(form, 'name'),
       contact: getFieldValue(form, 'contact'),
+      urgency: getFieldValue(form, 'urgency'),
       categories: getCheckboxValues(form, 'categories'),
       dietaryNotes: getFieldValue(form, 'dietaryNotes'),
       quantity: getFieldValue(form, 'quantity'),

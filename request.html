@@ -95,6 +95,16 @@
                   <textarea name="dietaryNotes" class="form-control" rows="3" placeholder="Examples: nut allergy, dairy-free, no shellfish"></textarea>
                 </div>
                 <div class="col-12">
+                  <label class="form-label">Urgency</label>
+                  <select name="urgency" class="form-select" required>
+                    <option value="" selected disabled>Select urgency</option>
+                    <option value="Urgent - Need food today">Urgent - Need food today</option>
+                    <option value="High - Need food within 1–2 days">High - Need food within 1–2 days</option>
+                    <option value="Medium - Need food within 3–5 days">Medium - Need food within 3–5 days</option>
+                    <option value="Low - Flexible">Low - Flexible</option>
+                  </select>
+                </div>
+                <div class="col-12">
                   <label class="form-label">Quantity needed</label>
                   <input type="text" name="quantity" class="form-control" placeholder="e.g. 20 packs or 50 meals" required />
                   <div id="requestCoverageMessage" class="form-text mt-2">Enter the amount you need and we will compare it with current donation listings.</div>
