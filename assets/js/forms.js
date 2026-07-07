@@ -1,7 +1,8 @@
-const N8N_BASE_URL = 'https://YOUR_N8N_HOST';
+const N8N_BASE_URL = 'https://n8ngc.codeblazar.org';
+
 const WEBHOOK_PATHS = {
-  request: '/webhook/food-request',
-  donation: '/webhook/food-donation',
+  request: '/webhook-test/food-request',
+  donation: '/webhook-test/food-donation',
 };
 
 document.addEventListener('DOMContentLoaded', () => {
